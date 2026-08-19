@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
 
+
 app = FastAPI()
 
 VERIFY_TOKEN = "visvak123"
@@ -30,3 +31,12 @@ async def verify_webhook(request: Request):
         content="Verification failed",
         status_code=403
     )
+
+@app.post("/webhook")
+async def receive_message(request: Request):
+    data = await request.json()
+
+    print("Incoming WhatsApp data:")
+    print(data)
+
+    return {"status": "received"}
