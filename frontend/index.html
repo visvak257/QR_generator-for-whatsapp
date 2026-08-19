@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>WhatsApp Product QR</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>WhatsApp Product QR</h1>
+
+        <p>Enter Product ID</p>
+
+        <input
+            type="text"
+            id="productId"
+            placeholder="Example: P003"
+        >
+
+        <button onclick="generateQR()">
+            Generate QR
+        </button>
+
+        <div id="product"></div>
+
+        <img
+            id="qrImage"
+            style="display:none;"
+        >
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
